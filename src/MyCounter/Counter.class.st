@@ -44,3 +44,10 @@ Counter >> increment [
 Counter >> initialize [
 	count := 0
 ]
+
+{ #category : #printing }
+Counter >> printOn: aStream [
+	super printOn: aStream.
+	aStream  nextPutAll: ' with value: '.
+	count printOn: aStream 
+]
